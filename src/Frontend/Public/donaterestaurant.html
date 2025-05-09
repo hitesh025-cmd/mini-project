@@ -1,1 +1,37 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Donation</title>
+</head>
+<body>
+  <h2>Donate as a Restaurant</h2>
+  <form id="restaurantForm">
+    <input name="name" placeholder="Restaurant Name" required>
+    <input name="location" placeholder="Location" required>
+    <input name="phone" placeholder="Phone" required>
+    <input name="email" type="email" placeholder="Email" required>
+    <input name="foodItems" placeholder="Food Items (comma separated)" required>
+    <select name="donationType">
+      <option value="Food">Food</option>
+      <option value="Money">Money</option>
+    </select>
+    <input name="amount" type="number" placeholder="Amount">
+    <button type="submit">Donate</button>
+  </form>
+  <script>
+    document.getElementById('restaurantForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = Object.fromEntries(new FormData(form).entries());
+      data.foodItems = data.foodItems.split(',').map(item => item.trim());
+      await fetch('/donate/restaurant', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      alert('Thank you for your donation!');
+      form.reset();
+    };
+  </script>
+</body>
+</html>
