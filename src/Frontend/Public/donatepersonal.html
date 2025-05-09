@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Donation</title>
+</head>
+<body>
+  <h2>Donate as an Individual</h2>
+  <form id="personalForm">
+    <input name="name" placeholder="Name" required>
+    <input name="age" type="number" placeholder="Age" required>
+    <input name="phone" placeholder="Phone" required>
+    <input name="email" type="email" placeholder="Email" required>
+    <select name="donationType">
+      <option value="Food">Food</option>
+      <option value="Money">Money</option>
+    </select>
+    <input name="amount" type="number" placeholder="Amount" required>
+    <button type="submit">Donate</button>
+  </form>
+  <script>
+    document.getElementById('personalForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = Object.fromEntries(new FormData(form).entries());
+      await fetch('/donate/personal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      alert('Thank you for your donation!');
+      form.reset();
+    };
+  </script>
+</body>
+</html>
 
