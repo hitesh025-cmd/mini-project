@@ -110,7 +110,7 @@ FoodDoor/
 Open-source under MIT License
 
 ## 📬 Contact
-Email: [your.email@example.com]
+Email: [jadaunhitesh9@gmail.com]
 """
 
 presentation_points = """\
