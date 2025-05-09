@@ -16,49 +16,7 @@ Dr. [Harsh Vardhan]
 School of Engineering & Technology
 K. R. Mangalam University, Sohna
 
----
-
-1. Abstract
-FoodDoor is a socially impactful web platform designed to bridge the gap between food donors and underprivileged individuals. The platform enables individuals and restaurants to donate surplus food or money and allows volunteers to register and support food distribution activities. Using a full-stack web application framework and MongoDB for data management, the project focuses on streamlining donations, reducing food waste, and promoting community involvement. The project also opens pathways for future scalability including real-time tracking and mobile app integration.
-
-2. Introduction
-Food wastage is a major issue while many go hungry. FoodDoor addresses this by connecting donors and underprivileged individuals using web technology.
-
-3. Literature Review
-Current systems lack automation and scalability. FoodDoor uses web tech to integrate data handling and form-based submissions for impact.
-
-4. Problem Statement & Objectives
-Problem: Daily wastage of food without a centralized redirection system.
-Objectives:
-- Provide a web portal for donation/volunteer registration
-- Store data securely with MongoDB
-- Prepare for mobile integration and tracking in future
-
-5. Methodology
-Design includes frontend (HTML/CSS/JS), backend (Node.js/Express), and MongoDB. Workflow: User input → Validation → DB entry → Action by admins/volunteers.
-
-6. Implementation
-- Personal donation: User submits contact and donation info
-- Restaurant donation: Adds business and food details
-- Volunteers: Register with basic info and ID proof
-- All data saved in MongoDB collections
-
-7. Results and Discussion
-Interface is responsive, data stores correctly in MongoDB, and submissions verified. Simple and reliable process.
-
-8. Conclusion and Future Work
-FoodDoor simplifies food donation and volunteer coordination.
-Future scope: mobile app, admin panel, tracking, SMS alerts, and user feedback.
-
-9. References
-1. MongoDB Docs
-2. Node.js & Express Docs
-3. W3Schools (HTML/CSS/JS)
-4. Bootstrap Docs
-5. MDN Web Docs
-"""
-
-readme_content = """\
+   
 # FoodDoor – Feed a Homeless Person
 
 **FoodDoor** is a full-stack web application that connects food donors (individuals or restaurants) with volunteers to redistribute surplus food to underprivileged communities. The platform aims to reduce food waste and hunger by making it simple to donate or volunteer.
